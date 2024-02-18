@@ -1,0 +1,57 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>  Reactive Power Compensation</title>
+        <!--  Using CDN for external libari-->
+        <script src="https://cdn.plot.ly/plotly-2.6.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.js"></script>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <!--  Stylesheet for setting up page-->
+        <link rel="stylesheet" type="text/css" href="Module1.css">
+    </head>
+    <body>
+        <div class="row">
+            <div class="centerContent">
+                <button id="FullScreenBut" class="buttonSize" style="width:400px"> Toggle Fullscreen</button>
+            </div>
+        </div>
+            <!--Create somewhere to draw the SVG circuit -->
+        <div class="row">
+            <div class="centerContent">
+                <div class='svgContainer' id="circCont"><!--- Added in the  javascript--></div> 
+            </div>
+        </div>
+            <!--Create the buttons to change load configuration-->
+         <div class="row">
+            <div class="centerButton" id="loadChangeButtons">
+                <label for="LoadChange" style='font-size: 32px'> Change Load</label>
+                <button id="hideLoad" class="buttonSize"> Hide Load</button>
+                <button id="seriesLoad"  class="buttonSize"> Series Load </button>
+                <button id="parallelLoad" class="buttonSize" style="width:200px" > Parallel Load</button>
+            </div>
+        </div>
+            <!--Create the buttons to control the animation -->
+        <div class="row">
+            <div class="centerButton" id="animationButtons">
+                    <label for="Animation" style='font-size:32px'> Animation</label>
+                    <button id="startAni" class="buttonSize"> Start</button>
+                    <button id="stopAni" class="buttonSize"> Stop </button>
+                    <button id="stepAni" class="buttonSize"> Step </button>
+                    <button id="resetZero" class="buttonSize">Reset/Zero </button>
+            </div>
+        </div>
+    <!--Create somewhere to draw the plots -->
+        <div class="row">
+            <div class="column" id="waveformDiv" ></div>
+            <div  class="column" id="phasorDiv" ></div>
+        </div>
+        <div class="row">
+            <div  class="column" id="powerDiv"></div>
+            <div  class="column" id="powerTriangleDiv"></div> <!--blank divider to line up the waveforms-->
+        </div>
+        <!-- include the script for the demo.--> 
+        <script src="demoScripts/ReactivePowerComp.js"></script>
+
+    </body>
+</html> 
