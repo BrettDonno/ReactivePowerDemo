@@ -368,17 +368,14 @@ Setting Up WaveformData
         //set the real power field
         circuitImageDiv.appendChild(realPowerScroll)
         setEditField(realPowerScroll,circuitSVG.RealPowerField);
-        realPowerScroll.setAttribute('value', '100');
         
         //set reactive power field
         circuitImageDiv.appendChild(reactivePowerScroll)
         setEditField(reactivePowerScroll,circuitSVG.QpowerField);
-        reactivePowerScroll.setAttribute('value', '100');
         
         //set cap field
         circuitImageDiv.appendChild(capScroll)
         setEditField(capScroll,circuitSVG.capField);
-        capScroll.setAttribute('value', '0');
         //the page's first call to updatecircuitParam.
         
         updatecircuitParam(QcompCircuit,parseFloat(realPowerScroll.value),parseFloat(reactivePowerScroll.value),parseFloat(capScroll.value));
@@ -412,13 +409,13 @@ Setting Up WaveformData
             
             let boxLeftX  = String(fieldDocEle.x.baseVal.value).concat("mm");
             let boxTopY   = String(fieldDocEle.y.baseVal.value).concat("mm");
-            let boxWidth  = String(fieldDocEle.width.baseVal.value-2).concat("mm");
-            let boxHeight = String(fieldDocEle.height.baseVal.value-1).concat("mm");
+            let boxWidth  = String(fieldDocEle.width.baseVal.value).concat("mm");
+            let boxHeight = String(fieldDocEle.height.baseVal.value).concat("mm");
             
-            buttField.style.left=boxLeftX;
-            buttField.style.top=boxTopY;
-            buttField.style.width= boxWidth;
-            buttField.style.height=boxHeight;
+            buttField.style.left   = boxLeftX;
+            buttField.style.top    = boxTopY;
+            buttField.style.width  = boxWidth;
+            buttField.style.height = boxHeight;
         }
     }   
 
