@@ -27,9 +27,9 @@
      inkscape:window-height="1417"
      id="namedview97"
      showgrid="false"
-     inkscape:zoom="1.4878411"
-     inkscape:cx="723.53157"
-     inkscape:cy="369.32707"
+     inkscape:zoom="2.1041251"
+     inkscape:cx="608.80412"
+     inkscape:cy="137.58688"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -566,7 +566,7 @@
        sodipodi:nodetypes="cccccc"
        inkscape:connector-curvature="0"
        id="path1943"
-       d="m 124.20079,13.74488 h 116.73379 v 28.43226 m 0,5.27077 V 85.89654 H 124.17483"
+       d="m 124.27938,14.63403 h 116.73379 v 28.43226 m 0,5.27077 V 86.78569 H 124.25342"
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <text
        id="text1669"
@@ -1011,7 +1011,7 @@
        style="font-size:27.5723px;white-space:pre;shape-inside:url(#rect2);display:inline;fill:#aad400;fill-opacity:1"><tspan
          x="995.31836"
          y="198.74555"
-         id="tspan1">0 µF</tspan></text>
+         id="tspan2">0 µF</tspan></text>
     <rect
        style="display:inline;opacity:0.24;fill:#808080;fill-opacity:0.996078;fill-rule:nonzero;stroke:none;stroke-width:0.811003;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
        id="rect3"
