@@ -149,11 +149,6 @@ Peforms 3 main tasks
 
     // Get the documentElement (<html>) to display the page in fullscreen 
     const pageDoc = document.documentElement;
-
-    //setup the various input fields used by the addField
-    const realPowerScroll = document.createElement("input");
-    const reactivePowerScroll = document.createElement("input");
-    const capScroll = document.createElement("input");
     
     //Recording button elements
         //load buttons div & elements, The div is used to attach only 1 listener for all buttons  and the elements are used for colouring
@@ -364,19 +359,25 @@ Setting Up WaveformData
     3) Draws the various plots.
 */
      function runWhenSVGLoaded(){
+
+         
+    //setup the various input fields used by the addField
+        let realPowerScroll = document.createElement("button");
+        let reactivePowerScroll = document.createElement("button");
+        let capScroll = document.createElement("button");
         //set the real power field
         circuitImageDiv.appendChild(realPowerScroll)
-        setNumFields(realPowerScroll,circuitSVG.RealPowerField);
+        setEditField(realPowerScroll,circuitSVG.RealPowerField);
         realPowerScroll.setAttribute('value', '100');
         
         //set reactive power field
         circuitImageDiv.appendChild(reactivePowerScroll)
-        setNumFields(reactivePowerScroll,circuitSVG.QpowerField);
+        setEditField(reactivePowerScroll,circuitSVG.QpowerField);
         reactivePowerScroll.setAttribute('value', '100');
         
         //set cap field
         circuitImageDiv.appendChild(capScroll)
-        setNumFields(capScroll,circuitSVG.capField);
+        setEditField(capScroll,circuitSVG.capField);
         capScroll.setAttribute('value', '0');
         //the page's first call to updatecircuitParam.
         
@@ -398,19 +399,21 @@ Setting Up WaveformData
         buttonAnimation.start.style.background=colourButtonActive;
         
         /*
-            Sets the position of the P,Q,C field based on a rect box defined in the SVG
+            Sets the position of the P,Q,C edit field based on a rect box defined in the SVG
             Only called 3 times when setting up circuit,
         */
-        function setNumFields(numField, fieldDocEle){
+        function setEditField(buttField, fieldDocEle){
             //setting properties of the field
-            numField.setAttribute('type', 'number');
-            numField.setAttribute('class', "inputField");
-            numField.style.fontSize="32px";
+           // numField.setAttribute('type', 'number');
+            //numField.setAttribute('class', "inputField");
+            buttField.setAttribute('class', "inputField");
+            buttField.setAttribute('value','Edit')
+            buttField.style.fontSize = "32px";
             
-            let boxLeftX=String(fieldDocEle.x.baseVal.value).concat("mm");
-            let boxTopY=String(fieldDocEle.y.baseVal.value).concat("mm");
-            let boxWidth=String(fieldDocEle.width.baseVal.value-2).concat("mm");
-            let boxHeight=String(fieldDocEle.height.baseVal.value-1).concat("mm");
+            let boxLeftX  = String(fieldDocEle.x.baseVal.value).concat("mm");
+            let boxTopY   = String(fieldDocEle.y.baseVal.value).concat("mm");
+            let boxWidth  = String(fieldDocEle.width.baseVal.value-2).concat("mm");
+            let boxHeight = String(fieldDocEle.height.baseVal.value-1).concat("mm");
             
             numField.style.left=boxLeftX;
             numField.style.top=boxTopY;
