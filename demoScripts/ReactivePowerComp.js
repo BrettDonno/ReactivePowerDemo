@@ -415,10 +415,10 @@ Setting Up WaveformData
             let boxWidth  = String(fieldDocEle.width.baseVal.value-2).concat("mm");
             let boxHeight = String(fieldDocEle.height.baseVal.value-1).concat("mm");
             
-            numField.style.left=boxLeftX;
-            numField.style.top=boxTopY;
-            numField.style.width= boxWidth;
-            numField.style.height=boxHeight;
+            buttField.style.left=boxLeftX;
+            buttField.style.top=boxTopY;
+            buttField.style.width= boxWidth;
+            buttField.style.height=boxHeight;
         }
     }   
 
